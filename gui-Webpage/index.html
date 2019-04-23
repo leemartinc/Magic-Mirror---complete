@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+    <title>Smart Mirror</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Abel|Gruppo|Josefin+Slab|Montserrat|Nixie+One|Open+Sans+Condensed:300|Poiret+One|Thasadith" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link href="css/jquery.gcal_flow.css" rel="stylesheet" type="text/css">
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.gcal_flow.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript">
+        var $ = jQuery;
+        //e90l3qvsqqgm9krd2md28sicvlalcv4p@import.calendar.google.com
+        $(function() {
+            $('#gcf-simple').gCalFlow({
+                calid: 'e90l3qvsqqgm9krd2md28sicvlalcv4p@import.calendar.google.com'
+            });
+        });
+    </script>
+
+
+    <script>
+        document.onkeydown = function(e) {
+            switch (e.keyCode) {
+                case 38:
+                    //alert('up'); 
+                    carouselHolder.classList.remove('animated', 'fadeOutDown');
+                    carouselHolder.classList.add('animated', 'fadeInUp');
+
+                    break;
+                case 40:
+                    //alert('down'); 
+                    carouselHolder.classList.remove('animated', 'fadeInUp');
+                    carouselHolder.classList.add('animated', 'fadeOutDown');
+
+                    break;
+            }
+        };
+    </script>
+</head>
+
+<body onload="start()">
+    <!-- indictor -->
+    <p class="ind fl-lt" onkeypress="keyStuff(event)" id="indicator">+</p>
+
+
+    <!--Clock-->
+    <div style="font-size: 50%;">
+        <h2 id="time" style="margin: 0px;">TIME
+        </h2>
+        <p id="date" style="margin-top: -20px; letter-spacing: 2px; text-align: center;"> wed test</p>
+    </div>
+
+    <!--calendar-->
+    <div id="gcf-simple" style="text-align: left;">hiiiii
+    </div>
+    <br>
+
+    <!--Weather-->
+    <div class="fl-rt" style="width: 314px; font-size: 30%;">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/33d75n84d39/atlanta/?unit=us" data-label_1="ATLANTA" data-label_2="WEATHER" data-theme="dark">ATLANTA WEATHER</a>
+        <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = 'https://weatherwidget.io/js/widget.min.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'weatherwidget-io-js');
+        </script>
+    </div>
+
+
+
+
+    <!--scrollable carousel-->
+    <div class="carouselHolder" id="the_carousel">
+        <div class="scene">
+            <div class="carousel">
+
+
+                <div id="slider">
+                    <a href="#" class="control_next" style="display: none;"></a>
+                    <a href="#" class="control_prev" style="display: none;">
+                    </a>
+                    <ul>
+                        <li>
+                            <script type='text/javascript' src='https://darksky.net/widget/graph-bar/33.7491,-84.3902/us12/en.js?width=100%&height=500&title=Full Forecast&textColor=000000&bgColor=ffffff&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=000000&tempColor=000000&currentDetailsOption=true'></script>
+                        </li>
+                        <li>
+                            <iframe src="https://embed.waze.com/iframe?
+  zoom=12&lat=33.748997&lon=-84.387985&pin=1" width="100%" height="100%"></iframe>
+                        </li>
+                        <li>
+                            <!--Word of the Day by TheFreeDictionary.com-->
+                            <div style="width:100%; height: 800px; position:relative; background-color: white; padding:4px">
+                                <div style="font:24pt '';color:#000000">Word of the Day</div>
+                                <style>
+                                    #WordOfTheDay {width:100%;border:1px #AFAFAF solid;background-color:}
+                                    #WordOfTheDay H3 {font:bold 20pt '';color:#000000}
+                                    #WordOfTheDay TD.WoDLeft {font:bold 20pt '';color:#000000}
+                                    #WordOfTheDay TD {font:normal 15pt '';color:#000000}
+                                    #WordOfTheDay A {color:#0000FF}
+                                </style>
+                                <div id="tfd_wod_div" style="top: 50%;">
+                                    <table id="WordOfTheDay">
+                                        <tr>
+                                            <td colspan="2" align="center">
+                                                <h3 style="margin-bottom:3pt">
+                                                    <a href="https://www.thefreedictionary.com/lurcher" rel="nofollow">lurcher</a></h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="WoDLeft" valign="top" align="right">Definition:</td>
+                                            <td align="left">Someone waiting in concealment.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="WoDLeft" valign="top">Synonyms:</td>
+                                            <td>
+                                                <a href="https://www.freethesaurus.com/lurker" rel="nofollow">lurker</a>,
+                                                <a href="https://www.freethesaurus.com/skulker" rel="nofollow">skulker</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <script type="text/javascript">
+                                    document.getElementById("tfd_wod_div").style.visibility = "hidden"
+                                </script>
+                                <script type="text/javascript" async src="//img.tfd.com/daily/wod-top.js" charset="UTF-8"></script>
+                                <div style="font:normal 8pt '';color:#000000">
+                                    <a style="color:#000000" href="https://www.thefreedictionary.com/lookup.htm#Word-of-the-Day" rel="nofollow">Word of the Day</a>
+                                    provided by <a style="color:#000000" href="https://www.thefreedictionary.com/" rel="nofollow">TheFreeDictionary.com</a>
+                                </div>
+                            </div>
+                            <!--end of Word of the Day-->
+                        </li>
+                    </ul>
+                </div>
+
+                <!--
+                <div class="slider_option">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox">Autoplay Slider</label>
+                </div>
+    -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+<script>
+    function start() {
+        startTime();
+        startDate();
+    }
+
+    function keyStuff(event) {
+
+    var x = event.charCode || event.keyCode;  // Get the Unicode value
+    var y = String.fromCharCode(x);  // Convert the value into a character
+   
+    /*  The above 2 lines of code come from:
+    http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_key_charcode4 */
+
+    alert("You pressed " + y + " and its charCode is " + x);
+    // display which key was pressed, along with its charCode, in an alert
+    }
+
+    function startTime() {
+        var today = new Date();
+        var hh = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        var dd = "AM";
+        var h = hh;
+        if (h >= 12) {
+            h = hh - 12;
+            dd = "PM";
+        }
+        if (h == 0) {
+            h = 12;
+        }
+
+        m = checkTime(m);
+        //s = checkTime(s);
+        document.getElementById('time').innerHTML =
+            h + ":" + m;
+        var t = setTimeout(startTime, 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }; // add zero in front of numbers < 10
+        return i;
+    }
+
+    function startDate() {
+        var d = new Date();
+        var montharray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var month = montharray[d.getMonth()];
+        var day = d.getDate();
+        var weekarray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var week = weekarray[d.getDay()];
+        document.getElementById('date').innerHTML = week + ", " + month + " " + day;
+        var t = setTimeout(startDate, 500);
+    }
+
+</script>
+
+<script>
+    var carousel = document.querySelector('.carousel');
+    var carouselHolder = document.querySelector('.carouselHolder');
+
+    jQuery(document).ready(function($) {
+
+        $('#checkbox').change(function() {
+            setInterval(function() {
+                moveRight();
+            }, 3000);
+        });
+
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        var sliderUlWidth = slideCount * slideWidth;
+
+        $('#slider').css({
+            width: slideWidth,
+            height: slideHeight
+        });
+
+        $('#slider ul').css({
+            width: sliderUlWidth,
+            marginLeft: -slideWidth
+        });
+
+        $('#slider ul li:last-child').prependTo('#slider ul');
+
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: +slideWidth
+            }, 500, function() {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        function moveRight() {
+            $('#slider ul').animate({
+                left: -slideWidth
+            }, 500, function() {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        };
+
+        $('a.control_prev').click(function() {
+            moveLeft();
+        });
+
+        $('a.control_next').click(function() {
+            moveRight();
+        });
+        
+        $(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+            moveLeft();
+        break;
+            /*
+        case 38: // up
+        break;
+*/
+        case 39: // right
+            moveRight();
+        break;
+
+        case 90: 
+            document.getElementById("indicator").style.color = "yellowgreen";
+        break;
+            
+        case 88: 
+            document.getElementById("indicator").style.color = "darkred";
+        break;
+            
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+    });
+
+</script>

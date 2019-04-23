@@ -1,0 +1,125 @@
+.gCalFlow {
+    position: absolute;
+    width: 30vw;
+    height: 600px;
+    font-family: 'Thasadith', sans-serif;
+    font-size: 20px !important;
+    overflow: hidden;
+    letter-spacing: 1px !important;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+}
+
+.gCalFlow a,
+.gCalFlow a:visited,
+.gCalFlow a:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+
+.gCalFlow a:hover {
+    text-decoration: underline;
+}
+
+.gCalFlow .gcf-header-block {
+    padding: 5px 4px;
+    background: black;
+    color: white;
+    font-size: 26px !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.gCalFlow .gcf-title-block {
+    font-weight: normal;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: white;
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-title-block a,
+.gCalFlow .gcf-title-block a:visited,
+.gCalFlow .gcf-title-block a:hover {
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-last-update-block {
+    font-size: 90%;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    padding-right: 4px;
+    position: absolute;
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-item-container-block {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 90%;
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-item-block {
+    position: relative;
+    padding: 2px;
+    margin: 2px 0;
+    background: black;
+    color: white;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.gCalFlow .gcf-item-header-block {
+    overflow: hidden;
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-item-date-block {
+    font-size: 76%;
+    background: black;
+    font-weight: bold;
+    color: white;
+}
+
+.gCalFlow .gcf-item-title-block {
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-item-body-block {
+    font-size: 80%;
+    max-height: 2.45em;
+    background: black;
+    color: white;
+}
+
+.gCalFlow {
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-header-block {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-top-left-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 15px;
+    padding-left: 5px;
+    background: black;
+    color: white;
+}
+
+.gCalFlow .gcf-item-body-block {
+    background: black;
+    color: white;
+}
