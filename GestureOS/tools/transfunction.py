@@ -14,6 +14,8 @@
    limitations under the License.
 """
 
+####@leemartinc: not used in smart mirror project
+
 import numpy
 import cv2
 

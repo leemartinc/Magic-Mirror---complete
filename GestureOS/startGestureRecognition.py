@@ -88,8 +88,11 @@ time.sleep(0.1)
 
 # Running the actual process
 while True:
+
+  #@leemartinc
   keyboard.press('x')
   keyboard.release('x')
+  #####
   
   #put gestture detect in this file
   # Initialize data lists
@@ -106,16 +109,15 @@ while True:
 
   frameCount = 0
 
+  #@leemartinc
   active = 1
   gestureDetected = None
   print ("waiting...")
-  while gestureDetected == None:
+  #####
 
-    # Increment the frame count each iteration
-    #frameCount += 1
-    #show the windows
-    #camera.capture(rgbFrame, format='bgr')
-    
+  #@leemartinc
+  while gestureDetected == None:
+  #####
 
     frame2 = captureProcessFrame(camera, rgbFrame, BLUR_REGION)
     
@@ -132,30 +134,26 @@ while True:
     frame1 = frame2
         
     
-    # Analyze for trends when a full window of data points has been gathered
+    #@leemartinc
     if len(xData) > 20:
       keyboard.press('x')
       keyboard.release('x')
       gestureDetected = determineDataTrends(xData, yData, X_DATA_THRESHOLD, Y_DATA_THRESHOLD)
       
       xData = []
-      
+    #####
       
       if gestureDetected is not None:
         
-        #recordGesture(gestureDetected)
         break
         print("[INFO] Gesture detected: " + gestureDetected)
       time.sleep(1)
+
+      #@leemartinc
       keyboard.press('z')
       keyboard.release('z')
-        
-        
-  #gesture = getCommand()
+      #####
 
-  #if gesture == "none":
-
-    #continue
   
   #press key
   print("gesture is " + gestureDetected)
